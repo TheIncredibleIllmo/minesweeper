@@ -1,19 +1,16 @@
 module.exports = {
   env: {
+    es6: true,
     browser: true,
     es2021: true,
   },
-  extends: ["plugin:react/recommended", "plugin:prettier/recommended"],
-  parser: "@typescript-eslint/parser",
+  extends: ["airbnb-base", "prettier"],
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: "latest",
+    ecmaVersion: 12,
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint", "prettier"],
   rules: {
-    quotes: ["error", "double"],
+    "prettier/prettier": "error",
   },
+  plugins: ["prettier"],
 };
